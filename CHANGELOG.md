@@ -10,6 +10,14 @@ Versioning].
 
 ## Unreleased
 
+## [v1.0.0] - 2024-09-18
+
+[v1.0.0]: https://github.com/ezzatron/isomorphic-msw/releases/tag/v1.0.0
+
+### Added
+
+- Releasing as stable.
+
 ## [v0.1.0] - 2024-09-18
 
 [v0.1.0]: https://github.com/ezzatron/isomorphic-msw/releases/tag/v0.1.0
