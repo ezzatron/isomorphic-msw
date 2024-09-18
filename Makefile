@@ -3,7 +3,7 @@ CHANGELOG_TAG_URL_PREFIX := https://github.com/ezzatron/isomorphic-msw/releases/
 JS_ARETHETYPESWRONG_REQ += artifacts/dist
 JS_PUBLINT_REQ += artifacts/dist
 JS_SKYPACK_PACKAGE_CHECK_REQ += artifacts/dist
-JS_VITEST_REQ += artifacts/dist
+JS_VITEST_REQ += playwright-install artifacts/dist
 
 ################################################################################
 
