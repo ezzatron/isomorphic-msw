@@ -1,0 +1,12 @@
+{
+  "entryPoints": ["src/browser.ts", "src/common.ts", "src/node.ts"],
+
+  "excludeNotDocumented": true,
+  "hideParameterTypesInTitle": true,
+  "navigationLinks": {
+    "GitHub": "https://github.com/ezzatron/isomorphic-msw"
+  },
+  "readme": "none",
+  "titleLink": "https://npmjs.com/package/isomorphic-msw",
+  "visibilityFilters": {}
+}

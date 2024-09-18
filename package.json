@@ -1,0 +1,97 @@
+{
+  "name": "isomorphic-msw",
+  "version": "0.0.0",
+  "description": "MSW with the same API for Node.js and browsers",
+  "keywords": [
+    "api",
+    "back-end",
+    "front-end",
+    "handler",
+    "mock",
+    "mocking",
+    "msw",
+    "prototype",
+    "server",
+    "service",
+    "testing",
+    "worker"
+  ],
+  "repository": "ezzatron/isomorphic-msw",
+  "bugs": "https://github.com/ezzatron/isomorphic-msw/issues",
+  "homepage": "https://ezzatron.com/isomorphic-msw",
+  "author": "Erin Millard <contact@erin.id.au>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "artifacts/dist/node.js",
+  "types": "artifacts/dist/node.d.ts",
+  "exports": {
+    ".": {
+      "browser": {
+        "types": "./artifacts/dist/browser.d.ts",
+        "import": "./artifacts/dist/browser.js"
+      },
+      "node": {
+        "types": "./artifacts/dist/node.d.ts",
+        "import": "./artifacts/dist/node.js"
+      },
+      "default": {
+        "types": "./artifacts/dist/node.d.ts",
+        "import": "./artifacts/dist/node.js"
+      }
+    }
+  },
+  "imports": {
+    "#isomorphic-msw": {
+      "browser": {
+        "types": "./artifacts/dist/browser.d.ts",
+        "import": "./artifacts/dist/browser.js"
+      },
+      "node": {
+        "types": "./artifacts/dist/node.d.ts",
+        "import": "./artifacts/dist/node.js"
+      },
+      "default": {
+        "types": "./artifacts/dist/node.d.ts",
+        "import": "./artifacts/dist/node.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "/artifacts/dist/"
+  ],
+  "scripts": {
+    "prepublishOnly": "tsc -p tsconfig.build.json"
+  },
+  "peerDependencies": {
+    "msw": "^2"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.0",
+    "@fast-check/vitest": "^0.1.0",
+    "@skypack/package-check": "^0.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/browser": "^2.1.1",
+    "@vitest/coverage-istanbul": "^2.1.1",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^17.0.0",
+    "eslint-plugin-promise": "^7.0.0",
+    "eslint-plugin-vitest": "^0.4.1",
+    "happy-dom": "^15.7.4",
+    "playwright": "^1.47.1",
+    "prettier": "^3.0.3 <3.3.0",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "publint": "^0.2.7",
+    "typedoc": "^0.26.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.10",
+    "vitest": "^2.0.0"
+  }
+}
