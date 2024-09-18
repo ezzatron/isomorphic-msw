@@ -10,6 +10,14 @@ Versioning].
 
 ## Unreleased
 
+## [v1.0.1] - 2024-09-18
+
+[v1.0.1]: https://github.com/ezzatron/isomorphic-msw/releases/tag/v1.0.1
+
+### Fixed
+
+- Fixed NPM publishing workflow permissions.
+
 ## [v1.0.0] - 2024-09-18
 
 [v1.0.0]: https://github.com/ezzatron/isomorphic-msw/releases/tag/v1.0.0
