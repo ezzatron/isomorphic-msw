@@ -8,9 +8,9 @@ _[MSW] with the same API for Node.js and browsers_
 [![Build status][badge-build-image]][badge-build-link]
 
 [badge-build-image]:
-  https://img.shields.io/github/actions/workflow/status/ezzatron/isomorphic-msw/ci.yml?branch=main&style=for-the-badge
+  https://img.shields.io/github/actions/workflow/status/ezzatron/isomorphic-msw/ci-node-library.yml?branch=main&style=for-the-badge
 [badge-build-link]:
-  https://github.com/ezzatron/isomorphic-msw/actions/workflows/ci.yml
+  https://github.com/ezzatron/isomorphic-msw/actions/workflows/ci-node-library.yml
 [badge-npm-version-image]:
   https://img.shields.io/npm/v/isomorphic-msw?label=isomorphic-msw&logo=npm&style=for-the-badge
 [badge-npm-version-link]: https://npmjs.com/package/isomorphic-msw
