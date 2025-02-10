@@ -11,7 +11,7 @@ export default defineWorkspace([
         enabled: true,
         headless: true,
         provider: "playwright",
-        name: "chromium",
+        instances: [{ browser: "chromium" }],
         screenshotDirectory: "artifacts/vitest/browser/screenshots",
       },
       alias: {
@@ -28,7 +28,7 @@ export default defineWorkspace([
         enabled: true,
         headless: true,
         provider: "playwright",
-        name: "chromium",
+        instances: [{ browser: "chromium" }],
         screenshotDirectory: "artifacts/vitest/browser/screenshots",
       },
     },
