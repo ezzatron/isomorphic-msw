@@ -84,7 +84,7 @@
     "eslint-plugin-n": "^17.17.0",
     "eslint-plugin-promise": "^7.2.1",
     "globals": "^16.0.0",
-    "happy-dom": "^17.0.0",
+    "happy-dom": "^18.0.0",
     "playwright": "^1.47.1",
     "prettier": "^3.0.3 <3.5.4",
     "prettier-plugin-organize-imports": "^4.0.0",
