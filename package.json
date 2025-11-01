@@ -74,7 +74,7 @@
     "@eslint/js": "^9.23.0",
     "@skypack/package-check": "^0.2.2",
     "@types/node": "^24.0.0",
-    "@vitest/browser": "^4.0.0",
+    "@vitest/browser-playwright": "^4.0.6",
     "@vitest/coverage-istanbul": "^4.0.0",
     "@vitest/eslint-plugin": "^1.1.38",
     "eslint": "^9.23.0",
