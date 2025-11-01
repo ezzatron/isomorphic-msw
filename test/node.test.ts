@@ -25,6 +25,8 @@ it("forwards calls to the server", async () => {
   const isomorphicServer = setupServerOrWorker(handlerA, handlerB);
   expect(setupServer).toBeCalledWith(handlerA, handlerB);
 
+  expect(isomorphicServer.type).toBe("server");
+
   const realServer = vi.mocked(setupServer).mock.results[0]
     .value as Mocked<SetupServer>;
 

@@ -10,6 +10,8 @@ it("forwards calls to the worker", async () => {
   const isomorphicWorker = setupServerOrWorker(handlerA, handlerB);
   expect(setupWorker).toBeCalledWith(handlerA, handlerB);
 
+  expect(isomorphicWorker.type).toBe("worker");
+
   const realWorker = vi.mocked(setupWorker).mock.results[0]
     .value as Mocked<SetupWorker>;
 
