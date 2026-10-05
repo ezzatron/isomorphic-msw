@@ -67,7 +67,7 @@
     "prepublishOnly": "tsc -p tsconfig.build.json"
   },
   "peerDependencies": {
-    "msw": "^2"
+    "msw": "^2 || ^3.0.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.0",
