@@ -22,7 +22,7 @@ export const setupServerOrWorker: SetupServerOrWorkerFn = (...handlers) => {
       server.listen(listenOptions);
     },
 
-    stop: () => {
+    stop: async () => {
       server.close();
     },
 

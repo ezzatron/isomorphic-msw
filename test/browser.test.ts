@@ -1,6 +1,6 @@
 import { setupServerOrWorker } from "#isomorphic-msw";
-import { http, HttpResponse } from "msw";
 import { setupWorker, type SetupWorker } from "msw/browser";
+import { http, HttpResponse } from "msw/http";
 import { expect, it, vi, type Mocked } from "vitest";
 
 it("forwards calls to the worker", async () => {
@@ -19,12 +19,12 @@ it("forwards calls to the worker", async () => {
   expect(realWorker.start).toBeCalledWith(undefined);
 
   await isomorphicWorker.start({
-    server: { onUnhandledRequest: "bypass" },
+    server: { onUnhandledFrame: "bypass" },
     worker: { quiet: true },
   });
   expect(realWorker.start).toBeCalledWith({ quiet: true });
 
-  isomorphicWorker.stop();
+  await isomorphicWorker.stop();
   expect(realWorker.stop).toBeCalled();
 
   isomorphicWorker.use(handlerA, handlerB);
