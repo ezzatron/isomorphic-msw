@@ -22,8 +22,8 @@ export const setupServerOrWorker: SetupServerOrWorkerFn = (...handlers) => {
       await worker.start(startOptions);
     },
 
-    stop: () => {
-      worker.stop();
+    stop: async () => {
+      await worker.stop();
     },
 
     use: (...handlers) => {

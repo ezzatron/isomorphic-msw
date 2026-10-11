@@ -27,7 +27,7 @@ export type SetupServerOrWorker = {
    * @see [MSW docs for `SetupServer.close()`](https://mswjs.io/docs/api/setup-server/close)
    * @see [MSW docs for `SetupWorker.stop()`](https://mswjs.io/docs/api/setup-worker/stop)
    */
-  stop: () => void;
+  stop: () => Promise<void>;
 
   /**
    * Prepend request handlers to the current worker instance.

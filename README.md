@@ -33,7 +33,7 @@ having to switch which [MSW] API is used:
 
 ```ts
 import { setupServerOrWorker } from "isomorphic-msw";
-import { http, HttpResponse } from "msw";
+import { http, HttpResponse } from "msw/http";
 import { afterAll, beforeAll, beforeEach, expect, it } from "vitest";
 
 const server = setupServerOrWorker();
@@ -42,7 +42,7 @@ beforeAll(async () => {
   await server.start({
     worker: {
       quiet: true,
-      onUnhandledRequest: "bypass",
+      onUnhandledFrame: "bypass",
     },
   });
 });
@@ -52,7 +52,7 @@ beforeEach(() => {
 });
 
 afterAll(async () => {
-  server.stop();
+  await server.stop();
 });
 
 it("responds to requests", async () => {

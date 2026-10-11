@@ -10,6 +10,20 @@ Versioning].
 
 ## Unreleased
 
+### Added
+
+- Support for [MSW v3].
+
+[msw v3]: https://mswjs.io/blog/introducing-msw-3.0
+
+### Changed
+
+- **\[BREAKING]** `stop()` is now async, matching MSW v3's [`worker.stop()`
+  change].
+
+[`worker.stop()` change]:
+  https://mswjs.io/docs/migrations/2.x-to-3.x#worker-stop
+
 ## [v1.0.1] - 2024-09-18
 
 [v1.0.1]: https://github.com/ezzatron/isomorphic-msw/releases/tag/v1.0.1

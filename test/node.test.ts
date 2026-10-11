@@ -1,5 +1,5 @@
 import { setupServerOrWorker } from "#isomorphic-msw";
-import { http, HttpResponse } from "msw";
+import { http, HttpResponse } from "msw/http";
 import { setupServer, type SetupServer } from "msw/node";
 import { expect, it, vi, type Mocked } from "vitest";
 
@@ -34,12 +34,12 @@ it("forwards calls to the server", async () => {
   expect(realServer.listen).toBeCalledWith(undefined);
 
   await isomorphicServer.start({
-    server: { onUnhandledRequest: "bypass" },
+    server: { onUnhandledFrame: "bypass" },
     worker: { quiet: true },
   });
-  expect(realServer.listen).toBeCalledWith({ onUnhandledRequest: "bypass" });
+  expect(realServer.listen).toBeCalledWith({ onUnhandledFrame: "bypass" });
 
-  isomorphicServer.stop();
+  await isomorphicServer.stop();
   expect(realServer.close).toBeCalled();
 
   isomorphicServer.use(handlerA, handlerB);
