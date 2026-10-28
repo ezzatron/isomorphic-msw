@@ -73,7 +73,7 @@
     "@arethetypeswrong/cli": "^0.18.0",
     "@eslint/js": "^10.0.1",
     "@skypack/package-check": "^0.2.2",
-    "@types/node": "^24.0.0",
+    "@types/node": "^26.0.0",
     "@typescript/native": "npm:typescript@^7.0.2",
     "@vitest/browser-playwright": "^5.0.0",
     "@vitest/coverage-istanbul": "^5.0.0",
