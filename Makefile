@@ -1,8 +1,5 @@
 CHANGELOG_TAG_URL_PREFIX := https://github.com/ezzatron/isomorphic-msw/releases/tag/
 
-JS_ARETHETYPESWRONG_REQ += artifacts/dist
-JS_PUBLINT_REQ += artifacts/dist
-JS_SKYPACK_PACKAGE_CHECK_REQ += artifacts/dist
 JS_VITEST_REQ += playwright-install artifacts/dist
 
 ################################################################################
@@ -20,10 +17,3 @@ JS_VITEST_REQ += playwright-install artifacts/dist
 
 .makefiles/%:
 	@curl -sfL https://makefiles.dev/v1 | bash /dev/stdin "$@"
-
-################################################################################
-
-artifacts/dist: tsconfig.build.json artifacts/link-dependencies.touch $(JS_SOURCE_FILES)
-	@rm -rf "$@"
-	$(JS_EXEC) tsc -p "$<"
-	@touch "$@"
